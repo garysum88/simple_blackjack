@@ -22,6 +22,8 @@ This simple Blackjack game was created using Python. This game stimulates a typi
 
 - The dealer needs to draw another card if he/she has a total point below 17 and will not draw another card if he/she has a total point of 17 or above.
 
+- If the dealer goes over 21 points, the player wins.
+
 - If both player and dealer has a non-busted hand, the hand which is closer to 21 wins. 
 
 - If both player and dealer has the same total point, it is a stand-off (tie).
