@@ -14,6 +14,16 @@ deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 4, 5, 6, 7
 dealer_hand = []
 player_hand = []
 
+# Check if the deck consists of 52 cards
+while len(deck) != 52:
+    print("Error! Please make sure there are 52 cards in the shoe!")
+    exit()
+
+# Welcome message
+print(" *****************************************")
+print(" * Welcome to the Simple Blackjack Game! *") 
+print(" *****************************************\n")
+print(f"This game uses a single deck of playing cards consisting of {len(deck)} cards!\n")
 
 # Deal the game
 # - This function takes one argument : a list from dealer/player
@@ -138,3 +148,6 @@ elif 21 - total(player_hand) > 21 - total(dealer_hand):
 else :
     print(f"You have {player_hand} for a total of {total(player_hand)} and the dealer has {dealer_hand} for a total of {total(dealer_hand)}")
     print("It is a tie!")
+
+# Ending message
+print(f"\nGame finished. Card remaining :  {len(deck)}\n")
