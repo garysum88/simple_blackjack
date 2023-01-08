@@ -66,7 +66,15 @@ for _ in range(2):
 
 # - while player or dealer are still ON (active)
 while player_on or dealer_on:
-    print(f"Dealer's up card is {dealer_hand[0]}")
+    dealer_faceup_value = 0
+    if dealer_hand[0]=='J' or dealer_hand[0]=='Q' or dealer_hand[0]=='K':
+        dealer_faceup_value=10
+    elif dealer_hand[0]=='A':
+        dealer_faceup_value=11
+    else:
+        dealer_faceup_value=dealer_hand[0]
+
+    print(f"Dealer's up card is {dealer_hand[0]} (value: {dealer_faceup_value})")
     print(f"You have {player_hand} for a total of {total(player_hand)}")
 
 
